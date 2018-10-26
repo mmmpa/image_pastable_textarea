@@ -1,0 +1,48 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "lint:fix": "eslint --fix src/**/*.{ts,tsx}",
+    "start": "webpack-dev-server --config webpack-config/webpack.config.js",
+    "start:ssr": "SIDE=ssr DEV_SERVER_PORT=9002 webpack -w --config webpack-config/webpack.config.js",
+    "build": "MODE=build webpack --config webpack-config/webpack.config.js",
+    "build:ssr": "SIDE=ssr MODE=build webpack --config webpack-config/webpack.config.js"
+  },
+  "dependencies": {
+    "global": "^4.3.2",
+    "preact": "^8.3.1",
+    "preact-render-to-string": "^3.8.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-react-jsx": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@babel/runtime": "^7.1.2",
+    "babel-loader": "^8.0.4",
+    "compression-webpack-plugin": "^2.0.0",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-standard-jsx": "^6.0.2",
+    "eslint-config-typescript": "^1.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-no-storage": "^1.0.2",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-typescript": "^0.12.0",
+    "ts-loader": "^5.2.1",
+    "typescript": "^3.1.1",
+    "typescript-eslint-parser": "^19.0.2",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
